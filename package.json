@@ -1,0 +1,10 @@
+{
+  "name": "@easyatwork/openweathermap",
+  "version": "0.1.0",
+  "description": "OpenWeatherMap API client.",
+  "author": "Jim C K Flaten <jim@easyatwork.com>",
+  "main": "owm.js",
+  "dependencies": {
+    "node-fetch": "^2.6"
+  }
+}
