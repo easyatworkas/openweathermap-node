@@ -151,7 +151,7 @@ class OpenWeatherMap {
 
     async dailyByZipCode(zipCode, countryCode = null) {
         return this.api('forecast/daily', {
-            zip: [ zip, countryCode ].filter(v => v !== null).join(',')
+            zip: [ zipCode, countryCode ].filter(v => v !== null).join(',')
         });
     }
 
