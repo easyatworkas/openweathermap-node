@@ -155,6 +155,33 @@ class OpenWeatherMap {
         });
     }
 
+    // MONTHLY
+
+    async monthlyByCityName(cityName, countryCode = null) {
+        return this.pro('climate/month', {
+            q: [ cityName, countryCode ].filter(v => v !== null).join(',')
+        });
+    }
+
+    async monthlyByCityId(id) {
+        return this.pro('climate/month', {
+            id
+        });
+    }
+
+    async monthlyByCoordinates(lat, lon) {
+        return this.pro('climate/month', {
+            lat,
+            lon
+        });
+    }
+
+    async monthlyByZipCode(zipCode, countryCode = null) {
+        return this.pro('climate/month', {
+            zip: [ zipCode, countryCode ].filter(v => v !== null).join(',')
+        });
+    }
+
     // HISTORICAL
 
     async historyByCityName(cityName, state, countryCode, start, end, cnt) {

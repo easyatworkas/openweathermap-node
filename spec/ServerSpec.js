@@ -193,6 +193,32 @@ describe('Server', () => {
                 // TODO: Verify content.
             });
         });
+
+        describe('Monthly', () => {
+            it('fetches by city name', async () => {
+                const response = owm.monthlyByCityName(c1.name, c1.country);
+
+                // TODO: Verify content.
+            });
+
+            it('fetches by city ID', async () => {
+                const response = owm.monthlyByCityId(c1.id);
+
+                // TODO: Verify content.
+            });
+
+            it('fetches by coordinates', async () => {
+                const response = owm.monthlyByCoordinates(c1.lat, c1.lng);
+
+                // TODO: Verify content.
+            });
+
+            it('fetches by zip code', async () => {
+                const response = owm.monthlyByZipCode(c1.zip, c1.country);
+
+                // TODO: Verify content.
+            });
+        });
     });
 
     describe('Historical data', () => {
